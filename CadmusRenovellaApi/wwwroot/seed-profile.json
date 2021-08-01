@@ -1,0 +1,1538 @@
+﻿{
+  "facets": [
+    {
+      "id": "collection",
+      "label": "collection",
+      "description": "A collection of tales.",
+      "colorKey": "AA3939",
+      "partDefinitions": [
+        {
+          "typeId": "it.vedph.renovella.tale-info",
+          "name": "tale",
+          "description": "Information about the frame tale in the collection.",
+          "isRequired": true,
+          "colorKey": "98F8F8",
+          "groupKey": "general",
+          "sortKey": "a"
+        },
+        {
+          "typeId": "it.vedph.renovella.tale-story",
+          "name": "story",
+          "description": "The story of the frame tale.",
+          "isRequired": true,
+          "colorKey": "F898F8",
+          "groupKey": "general",
+          "sortKey": "b"
+        },
+        {
+          "typeId": "it.vedph.bibliography",
+          "name": "bibliography",
+          "description": "Bibliography.",
+          "colorKey": "20B2AA",
+          "groupKey": "general",
+          "sortKey": "c"
+        },
+        {
+          "typeId": "it.vedph.categories",
+          "name": "categories",
+          "description": "Categories.",
+          "colorKey": "98F8F8",
+          "groupKey": "metadata",
+          "sortKey": "d"
+        },
+        {
+          "typeId": "it.vedph.index-keywords",
+          "name": "keywords",
+          "description": "Index keywords.",
+          "colorKey": "588BBF",
+          "groupKey": "metadata",
+          "sortKey": "e"
+        },
+        {
+          "typeId": "it.vedph.external-ids",
+          "name": "external IDs",
+          "description": "List of external resources IDs",
+          "colorKey": "BF6558",
+          "groupKey": "metadata",
+          "sortKey": "f"
+        },
+        {
+          "typeId": "it.vedph.note",
+          "name": "note",
+          "description": "A free text note.",
+          "colorKey": "B0A0F8",
+          "groupKey": "other",
+          "sortKey": "g"
+        }
+      ]
+    },
+    {
+      "id": "tale",
+      "label": "tale",
+      "description": "A single tale.",
+      "colorKey": "80839F",
+      "partDefinitions": [
+        {
+          "typeId": "it.vedph.renovella.tale-info",
+          "name": "tale",
+          "description": "Information about the tale.",
+          "isRequired": true,
+          "colorKey": "98F8F8",
+          "groupKey": "general",
+          "sortKey": "a"
+        },
+        {
+          "typeId": "it.vedph.renovella.tale-story",
+          "name": "story",
+          "description": "The story of the tale.",
+          "isRequired": true,
+          "colorKey": "F898F8",
+          "groupKey": "general",
+          "sortKey": "b"
+        },
+        {
+          "typeId": "it.vedph.bibliography",
+          "name": "bibliography",
+          "description": "Bibliography.",
+          "colorKey": "20B2AA",
+          "groupKey": "general",
+          "sortKey": "c"
+        },
+        {
+          "typeId": "it.vedph.doc-references",
+          "roleId": "",
+          "name": "references",
+          "description": "Manuscript and other documentary references.",
+          "colorKey": "FAC9D5",
+          "groupKey": "general",
+          "sortKey": "d"
+        },
+        {
+          "typeId": "it.vedph.categories",
+          "name": "categories",
+          "description": "Categories.",
+          "colorKey": "98F8F8",
+          "groupKey": "metadata",
+          "sortKey": "e"
+        },
+        {
+          "typeId": "it.vedph.index-keywords",
+          "name": "keywords",
+          "description": "Index keywords.",
+          "colorKey": "588BBF",
+          "groupKey": "metadata",
+          "sortKey": "f"
+        },
+        {
+          "typeId": "it.vedph.external-ids",
+          "name": "external IDs",
+          "description": "List of external resources IDs",
+          "colorKey": "BF6558",
+          "groupKey": "metadata",
+          "sortKey": "g"
+        },
+        {
+          "typeId": "it.vedph.note",
+          "name": "note",
+          "description": "A free text note.",
+          "colorKey": "B0A0F8",
+          "groupKey": "other",
+          "sortKey": "h"
+        }
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": 1,
+      "label": "complete",
+      "description": "The item is complete.",
+      "colorKey": "F0B880"
+    },
+    {
+      "id": 2,
+      "label": "revised",
+      "description": "The item has been revised.",
+      "colorKey": "80F080"
+    }
+  ],
+  "index": {
+    "writer": {
+      "id": "item-index-writer.mysql"
+    },
+    "reader": {
+      "id": "item-index-reader.mysql"
+    }
+  },
+  "thesauri": [
+    {
+      "id": "model-types@en",
+      "entries": [
+        {
+          "id": "it.vedph.renovella.tale-info",
+          "value": "tale"
+        },
+        {
+          "id": "it.vedph.renovella.tale-story",
+          "value": "story"
+        },
+        {
+          "id": "it.vedph.bibliography",
+          "value": "bibliography"
+        },
+        {
+          "id": "it.vedph.categories",
+          "value": "categories"
+        },
+        {
+          "id": "it.vedph.index-keywords",
+          "value": "keywords"
+        },
+        {
+          "id": "it.vedph.note",
+          "value": "note"
+        },
+        {
+          "id": "it.vedph.doc-references",
+          "value": "references"
+        },
+        {
+          "id": "it.vedph.external-ids",
+          "value": "external IDs"
+        }
+      ]
+    },
+    {
+      "id": "languages@en",
+      "entries": [
+        {
+          "id": "eng",
+          "value": "inglese"
+        },
+        {
+          "id": "fre",
+          "value": "francese"
+        },
+        {
+          "id": "deu",
+          "value": "tedesco"
+        },
+        {
+          "id": "grc",
+          "value": "greco"
+        },
+        {
+          "id": "ita",
+          "value": "italiano"
+        },
+        {
+          "id": "lat",
+          "value": "latino"
+        },
+        {
+          "id": "spa",
+          "value": "spagnolo"
+        }
+      ]
+    },
+    {
+      "id": "biblio-author-roles@en",
+      "entries": [
+        {
+          "id": "ed",
+          "value": "curatore"
+        },
+        {
+          "id": "tr",
+          "value": "traduttore"
+        },
+        {
+          "id": "coll",
+          "value": "collaboratore"
+        },
+        {
+          "id": "dir",
+          "value": "direttore"
+        },
+        {
+          "id": "org",
+          "value": "organizzazione"
+        }
+      ]
+    },
+    {
+      "id": "tale-languages@en",
+      "language": "en",
+      "entries": [
+        {
+          "id": "lat",
+          "value": "latino"
+        },
+        {
+          "id": "vul",
+          "value": "volgare"
+        }
+      ]
+    },
+    {
+      "id": "tale-genres@en",
+      "language": "en",
+      "entries": [
+        {
+          "id": "history",
+          "value": "aneddoto storico"
+        },
+        {
+          "id": "biography",
+          "value": "biografia"
+        },
+        {
+          "id": "chronicle",
+          "value": "cronaca"
+        },
+        {
+          "id": "exemplum",
+          "value": "esempio"
+        },
+        {
+          "id": "joke",
+          "value": "facezia"
+        },
+        {
+          "id": "fable",
+          "value": "favola"
+        },
+        {
+          "id": "fairy",
+          "value": "fiaba"
+        },
+        {
+          "id": "happy",
+          "value": "novella a lieto fine"
+        },
+        {
+          "id": "comic",
+          "value": "novella comica"
+        },
+        {
+          "id": "tragic",
+          "value": "novella tragica"
+        },
+        {
+          "id": "moral",
+          "value": "racconto morale"
+        }
+      ]
+    },
+    {
+      "id": "story-roles@en",
+      "language": "en",
+      "entries": [
+        {
+          "id": "-",
+          "value": "-"
+        },
+        {
+          "id": "abbot",
+          "value": "abate"
+        },
+        {
+          "id": "maid",
+          "value": "ancella"
+        },
+        {
+          "id": "nurse",
+          "value": "balia"
+        },
+        {
+          "id": "bergamasco",
+          "value": "bergamasco"
+        },
+        {
+          "id": "brigand",
+          "value": "brigante"
+        },
+        {
+          "id": "captain",
+          "value": "capitano"
+        },
+        {
+          "id": "cardinal",
+          "value": "cardinale"
+        },
+        {
+          "id": "knight",
+          "value": "cavaliere"
+        },
+        {
+          "id": "farmer",
+          "value": "contadino"
+        },
+        {
+          "id": "cook",
+          "value": "cuoco"
+        },
+        {
+          "id": "curate",
+          "value": "curato"
+        },
+        {
+          "id": "keeper",
+          "value": "custode"
+        },
+        {
+          "id": "lady",
+          "value": "dama"
+        },
+        {
+          "id": "woman",
+          "value": "donna"
+        },
+        {
+          "id": "hermit",
+          "value": "eremita"
+        },
+        {
+          "id": "brother",
+          "value": "fratello"
+        },
+        {
+          "id": "judge",
+          "value": "giudice"
+        },
+        {
+          "id": "jester",
+          "value": "giullare"
+        },
+        {
+          "id": "guard",
+          "value": "guardia"
+        },
+        {
+          "id": "thief",
+          "value": "ladro"
+        },
+        {
+          "id": "mother",
+          "value": "madre"
+        },
+        {
+          "id": "wizard",
+          "value": "mago"
+        },
+        {
+          "id": "worker",
+          "value": "manovale"
+        },
+        {
+          "id": "doctor",
+          "value": "medico"
+        },
+        {
+          "id": "porter",
+          "value": "facchino"
+        },
+        {
+          "id": "blacksmith",
+          "value": "fabbro"
+        },
+        {
+          "id": "philosopher",
+          "value": "filosofo"
+        },
+        {
+          "id": "florentine",
+          "value": "fiorentino"
+        },
+        {
+          "id": "baker",
+          "value": "fornaio"
+        },
+        {
+          "id": "french",
+          "value": "francese"
+        },
+        {
+          "id": "friar",
+          "value": "frate"
+        },
+        {
+          "id": "young",
+          "value": "giovane"
+        },
+        {
+          "id": "guardsman",
+          "value": "guardia"
+        },
+        {
+          "id": "lover",
+          "value": "innamorato"
+        },
+        {
+          "id": "sailor",
+          "value": "marinaio"
+        },
+        {
+          "id": "stepmother",
+          "value": "matrigna"
+        },
+        {
+          "id": "merchant",
+          "value": "mercante"
+        },
+        {
+          "id": "procuress",
+          "value": "mezzana"
+        },
+        {
+          "id": "dwarf",
+          "value": "nano"
+        },
+        {
+          "id": "neapolitan",
+          "value": "napoletano"
+        },
+        {
+          "id": "enemy",
+          "value": "nemico"
+        },
+        {
+          "id": "notary",
+          "value": "notaio"
+        },
+        {
+          "id": "host",
+          "value": "oste"
+        },
+        {
+          "id": "father",
+          "value": "padre"
+        },
+        {
+          "id": "madman",
+          "value": "pazzo"
+        },
+        {
+          "id": "pedant",
+          "value": "pedante"
+        },
+        {
+          "id": "pirate",
+          "value": "pirata"
+        },
+        {
+          "id": "painter",
+          "value": "pittore"
+        },
+        {
+          "id": "prince",
+          "value": "principe"
+        },
+        {
+          "id": "prostitute",
+          "value": "prostituta"
+        },
+        {
+          "id": "king",
+          "value": "re"
+        },
+        {
+          "id": "slave",
+          "value": "schiavo"
+        },
+        {
+          "id": "fool",
+          "value": "sciocco"
+        },
+        {
+          "id": "student",
+          "value": "scolare"
+        },
+        {
+          "id": "servant",
+          "value": "serva"
+        },
+        {
+          "id": "lord",
+          "value": "signore"
+        },
+        {
+          "id": "soldier",
+          "value": "soldato"
+        },
+        {
+          "id": "sister",
+          "value": "sorella"
+        },
+        {
+          "id": "spanish",
+          "value": "spagnolo"
+        },
+        {
+          "id": "nun",
+          "value": "suora"
+        },
+        {
+          "id": "german",
+          "value": "tedesco"
+        },
+        {
+          "id": "oldman",
+          "value": "vecchio"
+        },
+        {
+          "id": "widow",
+          "value": "vedova"
+        },
+        {
+          "id": "venetian",
+          "value": "veneziano"
+        },
+        {
+          "id": "bishop",
+          "value": "vescovo"
+        },
+        {
+          "id": "neighbor",
+          "value": "vicino"
+        }
+      ]
+    },
+    {
+      "id": "story-place-types@en",
+      "language": "en",
+      "entries": [
+        {
+          "id": "-",
+          "value": "---"
+        },
+        {
+          "id": "square",
+          "value": "piazza"
+        },
+        {
+          "id": "mercato",
+          "value": "market"
+        },
+        {
+          "id": "workshop",
+          "value": "bottega"
+        },
+        {
+          "id": "tavern",
+          "value": "taverna"
+        },
+        {
+          "id": "school",
+          "value": "scuola"
+        },
+        {
+          "id": "house",
+          "value": "casa"
+        },
+        {
+          "id": "baths",
+          "value": "bagni"
+        },
+        {
+          "id": "countryside",
+          "value": "campagna"
+        },
+        {
+          "id": "convent",
+          "value": "convento"
+        },
+        {
+          "id": "city",
+          "value": "città"
+        },
+        {
+          "id": "region",
+          "value": "regione"
+        },
+        {
+          "id": "country",
+          "value": "nazione"
+        }
+      ]
+    },
+    {
+      "id": "story-ages@en",
+      "language": "en",
+      "entries": [
+        {
+          "id": "-",
+          "value": "---"
+        },
+        {
+          "id": "dated",
+          "value": "datata"
+        },
+        {
+          "id": "classical",
+          "value": "classicità"
+        },
+        {
+          "id": "greek",
+          "value": "antichità greca"
+        },
+        {
+          "id": "roman",
+          "value": "antichità romana"
+        },
+        {
+          "id": "medieval",
+          "value": "epoca alto-medievale"
+        },
+        {
+          "id": "near-past",
+          "value": "passato prossimo"
+        }
+      ]
+    },
+    {
+      "id": "categories@en",
+      "language": "en",
+      "entries": [
+        {
+          "id": "o",
+          "value": "occasioni"
+        },
+        {
+          "id": "o.scope",
+          "value": "occasioni: estensione"
+        },
+        {
+          "id": "o.scope.private",
+          "value": "occasioni: estensione: evento privato"
+        },
+        {
+          "id": "o.scope.public",
+          "value": "occasioni: estensione: evento pubblico"
+        },
+        {
+          "id": "o.history",
+          "value": "occasioni: storicità"
+        },
+        {
+          "id": "o.history.real",
+          "value": "occasioni: storicità: evento reale"
+        },
+        {
+          "id": "o.history.fictitious",
+          "value": "occasioni: storicità: evento fittizio"
+        },
+        {
+          "id": "o.type",
+          "value": "occasioni: tipo"
+        },
+        {
+          "id": "o.type.fest",
+          "value": "occasioni: tipo: festa"
+        },
+        {
+          "id": "o.type.fest.rel",
+          "value": "occasioni: tipo: festa: religiosa"
+        },
+        {
+          "id": "o.type.fest.rel.-",
+          "value": "occasioni: tipo: festa: religiosa"
+        },
+        {
+          "id": "o.type.fest.rel.carnival",
+          "value": "occasioni: tipo: festa: religiosa: carnevale"
+        },
+        {
+          "id": "o.type.fest.rel.easter",
+          "value": "occasioni: tipo: festa: religiosa: pasqua"
+        },
+        {
+          "id": "o.type.fest.rel.xmas",
+          "value": "occasioni: tipo: festa: religiosa: natale"
+        },
+        {
+          "id": "o.type.fest.wedding",
+          "value": "occasioni: tipo: festa: matrimonio"
+        },
+        {
+          "id": "o.type.fest.birth",
+          "value": "occasioni: tipo: festa: nascita"
+        },
+        {
+          "id": "o.type.war",
+          "value": "occasioni: tipo: guerra"
+        },
+        {
+          "id": "o.type.war.-",
+          "value": "occasioni: tipo: guerra"
+        },
+        {
+          "id": "o.type.war.battle",
+          "value": "occasioni: tipo: guerra: battaglia"
+        },
+        {
+          "id": "o.type.war.siege",
+          "value": "occasioni: tipo: guerra: assedio"
+        },
+        {
+          "id": "o.type.disease",
+          "value": "occasioni: tipo: malattia"
+        },
+        {
+          "id": "o.type.disease.-",
+          "value": "occasioni: tipo: malattia"
+        },
+        {
+          "id": "o.type.disease.plague",
+          "value": "occasioni: tipo: malattia: peste"
+        },
+        {
+          "id": "o.type.weather",
+          "value": "occasioni: tipo: maltempo"
+        },
+        {
+          "id": "o.type.inprisonment",
+          "value": "occasioni: tipo: prigionia"
+        },
+        {
+          "id": "o.type.travel",
+          "value": "occasioni: tipo: viaggio"
+        },
+        {
+          "id": "e",
+          "value": "eventi"
+        },
+        {
+          "id": "e.confl",
+          "value": "eventi: conflitti"
+        },
+        {
+          "id": "e.confl.dispute",
+          "value": "eventi: conflitti: dispute"
+        },
+        {
+          "id": "e.confl.dispute.competition",
+          "value": "eventi: conflitti: dispute: gara"
+        },
+        {
+          "id": "e.confl.dispute.challenge",
+          "value": "eventi: conflitti: dispute: sfida"
+        },
+        {
+          "id": "e.confl.dispute.comparison",
+          "value": "eventi: conflitti: dispute: confronti"
+        },
+        {
+          "id": "e.confl.dispute.comparison.nation",
+          "value": "eventi: conflitti: dispute: confronti: nazioni"
+        },
+        {
+          "id": "e.confl.dispute.comparison.city",
+          "value": "eventi: conflitti: dispute: confronti: città"
+        },
+        {
+          "id": "e.confl.dispute.comparison.city-country",
+          "value": "eventi: conflitti: dispute: confronti: città/campagna"
+        },
+        {
+          "id": "e.confl.dispute.comparison.man-woman",
+          "value": "eventi: conflitti: dispute: confronti: uomo/donna"
+        },
+        {
+          "id": "e.confl.trick",
+          "value": "eventi: conflitti: inganno"
+        },
+        {
+          "id": "e.confl.trick.mockery",
+          "value": "eventi: conflitti: inganno: beffa"
+        },
+        {
+          "id": "e.confl.trick.disguise",
+          "value": "eventi: conflitti: inganno: travestimento"
+        },
+        {
+          "id": "e.confl.robbery",
+          "value": "eventi: conflitti: furto"
+        },
+        {
+          "id": "e.confl.revenge",
+          "value": "eventi: conflitti: vendetta"
+        },
+        {
+          "id": "e.confl.mode",
+          "value": "eventi: conflitti: modalità"
+        },
+        {
+          "id": "e.confl.mode.physical",
+          "value": "eventi: conflitti: modalità: fisico"
+        },
+        {
+          "id": "e.confl.mode.physical.-",
+          "value": "eventi: conflitti: modalità: fisico"
+        },
+        {
+          "id": "e.confl.mode.physical.single",
+          "value": "eventi: conflitti: modalità: fisico: individuale"
+        },
+        {
+          "id": "e.confl.mode.physical.group",
+          "value": "eventi: conflitti: modalità: fisico: collettivo"
+        },
+        {
+          "id": "e.confl.mode.verbal",
+          "value": "eventi: conflitti: modalità: verbale"
+        },
+        {
+          "id": "e.confl.mode.verbal.-",
+          "value": "eventi: conflitti: modalità: verbale"
+        },
+        {
+          "id": "e.confl.mode.verbal.motto",
+          "value": "eventi: conflitti: modalità: verbale: motto"
+        },
+        {
+          "id": "e.confl.mode.verbal.misund",
+          "value": "eventi: conflitti: modalità: verbale: equivoco"
+        },
+        {
+          "id": "e.confl.mode.verbal.disputatio",
+          "value": "eventi: conflitti: modalità: verbale: disputationes"
+        },
+        {
+          "id": "e.econ",
+          "value": "eventi: economici"
+        },
+        {
+          "id": "e.econ.get-rich",
+          "value": "eventi: economici: arricchimento"
+        },
+        {
+          "id": "e.econ.get-rich.-",
+          "value": "eventi: economici: arricchimento"
+        },
+        {
+          "id": "e.econ.get-rich.act",
+          "value": "eventi: economici: arricchimento: attivo"
+        },
+        {
+          "id": "e.econ.get-rich.psv",
+          "value": "eventi: economici: arricchimento: passivo"
+        },
+        {
+          "id": "e.econ.get-rich.game",
+          "value": "eventi: economici: arricchimento: gioco"
+        },
+        {
+          "id": "e.econ.get-rich.luck",
+          "value": "eventi: economici: arricchimento: fortuna"
+        },
+        {
+          "id": "e.econ.get-poor",
+          "value": "eventi: economici: impoverimento"
+        },
+        {
+          "id": "e.econ.get-poor.-",
+          "value": "eventi: economici: impoverimento"
+        },
+        {
+          "id": "e.econ.get-poor.act",
+          "value": "eventi: economici: impoverimento: attivo"
+        },
+        {
+          "id": "e.econ.get-poor.psv",
+          "value": "eventi: economici: impoverimento: passivo"
+        },
+        {
+          "id": "e.luck",
+          "value": "eventi: fortuna"
+        },
+        {
+          "id": "e.luck.good",
+          "value": "eventi: fortuna: buona"
+        },
+        {
+          "id": "e.luck.bad",
+          "value": "eventi: fortuna: cattiva"
+        },
+        {
+          "id": "e.health",
+          "value": "eventi: salute"
+        },
+        {
+          "id": "e.health.wound",
+          "value": "eventi: salute: ferimento"
+        },
+        {
+          "id": "e.health.disease",
+          "value": "eventi: salute: malattia"
+        },
+        {
+          "id": "e.health.healing",
+          "value": "eventi: salute: guarigione"
+        },
+        {
+          "id": "e.health.death",
+          "value": "eventi: salute: morte"
+        },
+        {
+          "id": "e.health.death.natural",
+          "value": "eventi: salute: morte: naturale"
+        },
+        {
+          "id": "e.health.death.homicide",
+          "value": "eventi: salute: morte: omicidio"
+        },
+        {
+          "id": "e.health.death.suicide",
+          "value": "eventi: salute: morte: suicidio"
+        },
+        {
+          "id": "e.supern",
+          "value": "eventi: sovrannaturali"
+        },
+        {
+          "id": "e.supern.miracle",
+          "value": "eventi: sovrannaturali: miracolo"
+        },
+        {
+          "id": "e.supern.magic",
+          "value": "eventi: sovrannaturali: magia"
+        },
+        {
+          "id": "e.misund",
+          "value": "eventi: equivoco"
+        },
+        {
+          "id": "e.misund.disguise",
+          "value": "eventi: equivoco: travestimento"
+        },
+        {
+          "id": "e.misund.exchange",
+          "value": "eventi: equivoco: scambio di persona"
+        },
+        {
+          "id": "e.out",
+          "value": "eventi: esito"
+        },
+        {
+          "id": "e.out.formation",
+          "value": "eventi: esito: formazione"
+        },
+        {
+          "id": "e.out.justice",
+          "value": "eventi: esito: giustizia"
+        },
+        {
+          "id": "e.out.law",
+          "value": "eventi: esito: legge"
+        },
+        {
+          "id": "e.out.award",
+          "value": "eventi: esito: premio"
+        },
+        {
+          "id": "e.out.punishment",
+          "value": "eventi: esito: punizione"
+        },
+        {
+          "id": "t",
+          "value": "temi"
+        },
+        {
+          "id": "t.qual",
+          "value": "temi: qualità"
+        },
+        {
+          "id": "t.qual.p",
+          "value": "temi: qualità: positive"
+        },
+        {
+          "id": "t.qual.p.virtue",
+          "value": "temi: qualità: positive: virtù"
+        },
+        {
+          "id": "t.qual.p.virtue.-",
+          "value": "temi: qualità: positive: virtù"
+        },
+        {
+          "id": "t.qual.p.virtue.courage",
+          "value": "temi: qualità: positive: virtù: coraggio"
+        },
+        {
+          "id": "t.qual.p.virtue.courtesy",
+          "value": "temi: qualità: positive: virtù: cortesia"
+        },
+        {
+          "id": "t.qual.p.virtue.faith",
+          "value": "temi: qualità: positive: virtù: fede"
+        },
+        {
+          "id": "t.qual.p.virtue.gratitude",
+          "value": "temi: qualità: positive: virtù: gratitudine"
+        },
+        {
+          "id": "t.qual.p.virtue.ingenuity",
+          "value": "temi: qualità: positive: virtù: ingegno"
+        },
+        {
+          "id": "t.qual.p.virtue.loyalty",
+          "value": "temi: qualità: positive: virtù: lealtà"
+        },
+        {
+          "id": "t.qual.p.virtue.liberality",
+          "value": "temi: qualità: positive: virtù: liberalità"
+        },
+        {
+          "id": "t.qual.p.virtue.honor",
+          "value": "temi: qualità: positive: virtù: onore"
+        },
+        {
+          "id": "t.qual.p.virtue.modesty",
+          "value": "temi: qualità: positive: virtù: pudicizia"
+        },
+        {
+          "id": "t.qual.p.cunning",
+          "value": "temi: qualità: positive: astuzia"
+        },
+        {
+          "id": "t.qual.p.curiosity",
+          "value": "temi: qualità: positive: curiosità"
+        },
+        {
+          "id": "t.qual.p.rhetoric",
+          "value": "temi: qualità: positive: retorica"
+        },
+        {
+          "id": "t.qual.n",
+          "value": "temi: qualità: negative"
+        },
+        {
+          "id": "t.qual.n.defect",
+          "value": "temi: qualità: negative: difetti"
+        },
+        {
+          "id": "t.qual.n.defect.gullibility",
+          "value": "temi: qualità: negative: difetti: dabbenaggine"
+        },
+        {
+          "id": "t.qual.n.defect.madness",
+          "value": "temi: qualità: negative: difetti: follia"
+        },
+        {
+          "id": "t.qual.n.defect.laziness",
+          "value": "temi: qualità: negative: difetti: pigrizia"
+        },
+        {
+          "id": "t.qual.n.defect.stupidity",
+          "value": "temi: qualità: negative: difetti: stupidità"
+        },
+        {
+          "id": "t.qual.n.vice",
+          "value": "temi: qualità: negative: vizi"
+        },
+        {
+          "id": "t.qual.n.vice.avarice",
+          "value": "temi: qualità: negative: vizi: avarizia"
+        },
+        {
+          "id": "t.qual.n.vice.greed",
+          "value": "temi: qualità: negative: vizi: cupidigia"
+        },
+        {
+          "id": "t.qual.n.vice.jealousy",
+          "value": "temi: qualità: negative: vizi: gelosia"
+        },
+        {
+          "id": "t.qual.n.vice.gluttony",
+          "value": "temi: qualità: negative: vizi: gola"
+        },
+        {
+          "id": "t.qual.n.vice.incontinence",
+          "value": "temi: qualità: negative: vizi: incontinenza"
+        },
+        {
+          "id": "t.qual.n.vice.envy",
+          "value": "temi: qualità: negative: vizi: invidia"
+        },
+        {
+          "id": "t.qual.n.vice.lust",
+          "value": "temi: qualità: negative: vizi: lussuria"
+        },
+        {
+          "id": "t.qual.n.vice.pride",
+          "value": "temi: qualità: negative: vizi: superbia"
+        },
+        {
+          "id": "t.qual.n.vice.vainglory",
+          "value": "temi: qualità: negative: vizi: vanagloria"
+        },
+        {
+          "id": "t.qual.n.cunning",
+          "value": "temi: qualità: negative: astuzia"
+        },
+        {
+          "id": "t.qual.n.curiosity",
+          "value": "temi: qualità: negative: curiosità"
+        },
+        {
+          "id": "t.qual.n.rhetoric",
+          "value": "temi: qualità: negative: retorica"
+        },
+        {
+          "id": "t.rel",
+          "value": "temi: relazioni personali"
+        },
+        {
+          "id": "t.rel.friend",
+          "value": "temi: relazioni personali: amicizia"
+        },
+        {
+          "id": "t.rel.friend.-",
+          "value": "temi: relazioni personali: amicizia"
+        },
+        {
+          "id": "t.rel.friend.comare",
+          "value": "temi: relazioni personali: amicizia: com(p)are"
+        },
+        {
+          "id": "t.rel.friend.m",
+          "value": "temi: relazioni personali: amicizia: maschile"
+        },
+        {
+          "id": "t.rel.friend.f",
+          "value": "temi: relazioni personali: amicizia: femminile"
+        },
+        {
+          "id": "t.rel.friend.betrayal",
+          "value": "temi: relazioni personali: amicizia: tradimento"
+        },
+        {
+          "id": "t.rel.friend.gratitude",
+          "value": "temi: relazioni personali: amicizia: gratitudine"
+        },
+        {
+          "id": "t.rel.friend.ingratitude",
+          "value": "temi: relazioni personali: amicizia: ingratitudine"
+        },
+        {
+          "id": "t.rel.kin",
+          "value": "temi: relazioni personali: parentela"
+        },
+        {
+          "id": "t.rel.kin.parent",
+          "value": "temi: relazioni personali: parentela: genitori/figli"
+        },
+        {
+          "id": "t.rel.kin.sibling",
+          "value": "temi: relazioni personali: parentela: fratello/sorella"
+        },
+        {
+          "id": "t.rel.kin.betrayal",
+          "value": "temi: relazioni personali: parentela: tradimento"
+        },
+        {
+          "id": "t.rel.kin.gratitude",
+          "value": "temi: relazioni personali: parentela: gratitudine"
+        },
+        {
+          "id": "t.rel.kin.ingratitude",
+          "value": "temi: relazioni personali: parentela: ingratitudine"
+        },
+        {
+          "id": "t.rel.sent",
+          "value": "temi: relazioni sentimentali"
+        },
+        {
+          "id": "t.rel.sent.love",
+          "value": "temi: relazioni sentimentali: amore"
+        },
+        {
+          "id": "t.rel.sent.courtship",
+          "value": "temi: relazioni sentimentali: corteggiamento"
+        },
+        {
+          "id": "t.rel.sent.eros",
+          "value": "temi: relazioni sentimentali: eros"
+        },
+        {
+          "id": "t.rel.sent.fidelity",
+          "value": "temi: relazioni sentimentali: fedeltà"
+        },
+        {
+          "id": "t.rel.sent.infidelity",
+          "value": "temi: relazioni sentimentali: infedeltà"
+        },
+        {
+          "id": "t.rel.sent.wedding",
+          "value": "temi: relazioni sentimentali: matrimonio"
+        },
+        {
+          "id": "t.rel.sent.betrayal",
+          "value": "temi: relazioni sentimentali: tradimento"
+        },
+        {
+          "id": "t.rel.sent.gratitude",
+          "value": "temi: relazioni sentimentali: gratitudine"
+        },
+        {
+          "id": "t.rel.sent.ingratitude",
+          "value": "temi: relazioni sentimentali: ingratitudine"
+        },
+        {
+          "id": "t.rel.hier",
+          "value": "temi: relazioni gerarchiche"
+        },
+        {
+          "id": "t.rel.hier.-",
+          "value": "temi: relazioni gerarchiche"
+        },
+        {
+          "id": "t.rel.hier.feudal",
+          "value": "temi: relazioni gerarchiche: feudali"
+        },
+        {
+          "id": "t.rel.hier.feudal.king-lord",
+          "value": "temi: relazioni gerarchiche: feudali: re/signore"
+        },
+        {
+          "id": "t.rel.hier.feudal.lord-vassal",
+          "value": "temi: relazioni gerarchiche: feudali: signore/vassallo"
+        },
+        {
+          "id": "t.rel.hier.feudal.lord-servant",
+          "value": "temi: relazioni gerarchiche: feudali: signore/domestico"
+        },
+        {
+          "id": "t.rel.hier.king-subject",
+          "value": "temi: relazioni gerarchiche: re/suddito"
+        },
+        {
+          "id": "t.rel.hier.lord-subject",
+          "value": "temi: relazioni gerarchiche: signore/sottoposto"
+        },
+        {
+          "id": "t.rel.hier.betrayal",
+          "value": "temi: relazioni gerarchiche: tradimento"
+        },
+        {
+          "id": "t.rel.hier.gratitude",
+          "value": "temi: relazioni gerarchiche: gratitudine"
+        },
+        {
+          "id": "t.rel.hier.ingratitude",
+          "value": "temi: relazioni gerarchiche: ingratitudine"
+        },
+        {
+          "id": "y.coll",
+          "value": "tipologia"
+        },
+        {
+          "id": "y.coll.normal",
+          "value": "tipologia: raccolta"
+        },
+        {
+          "id": "y.coll.short",
+          "value": "tipologia: raccolta breve"
+        },
+        {
+          "id": "y.coll.two",
+          "value": "tipologia: dittico"
+        },
+        {
+          "id": "y.coll.sparse",
+          "value": "tipologia: spicciolata"
+        }
+      ]
+    },
+    {
+      "id": "tale-occasions@en",
+      "language": "en",
+      "entries": [
+        {
+          "id": "siege",
+          "value": "assedio"
+        },
+        {
+          "id": "carnival",
+          "value": "carnevale"
+        },
+        {
+          "id": "historical",
+          "value": "evento storico"
+        },
+        {
+          "id": "festivity",
+          "value": "festività"
+        },
+        {
+          "id": "disease",
+          "value": "malattia"
+        },
+        {
+          "id": "weather",
+          "value": "maltempo"
+        },
+        {
+          "id": "xmas",
+          "value": "natale"
+        },
+        {
+          "id": "wedding",
+          "value": "nozze"
+        },
+        {
+          "id": "plague",
+          "value": "peste"
+        },
+        {
+          "id": "inprisonment",
+          "value": "prigionia"
+        },
+        {
+          "id": "travel",
+          "value": "viaggio"
+        }
+      ]
+    },
+    {
+      "id": "person-name-languages@en",
+      "targetId": "languages"
+    },
+    {
+      "id": "name-part-type-entries@en",
+      "entries": [
+        {
+          "id": "first",
+          "value": "nome"
+        },
+        {
+          "id": "last",
+          "value": "cognome"
+        },
+        {
+          "id": "name",
+          "value": "nome generico"
+        },
+        {
+          "id": "title",
+          "value": "titolo"
+        },
+        {
+          "id": "epithet",
+          "value": "epiteto"
+        }
+      ]
+    },
+    {
+      "id": "bibliography-languages@en",
+      "targetId": "languages"
+    },
+    {
+      "id": "bibliography-types@en",
+      "entries": [
+        {
+          "id": "book",
+          "value": "book"
+        },
+        {
+          "id": "article-j",
+          "value": "journal article"
+        },
+        {
+          "id": "article-b",
+          "value": "book article"
+        },
+        {
+          "id": "article-p",
+          "value": "proceedings article"
+        },
+        {
+          "id": "review",
+          "value": "review"
+        },
+        {
+          "id": "ebook",
+          "value": "e-book"
+        },
+        {
+          "id": "site",
+          "value": "web site"
+        },
+        {
+          "id": "magazine",
+          "value": "magazine"
+        },
+        {
+          "id": "newspaper",
+          "value": "newspaper"
+        },
+        {
+          "id": "tweet",
+          "value": "tweet"
+        }
+      ]
+    },
+    {
+      "id": "external-id-types@en",
+      "entries": [
+        {
+          "id": "-",
+          "value": "-"
+        },
+        {
+          "id": "url",
+          "value": "URL"
+        },
+        {
+          "id": "uri",
+          "value": "URI"
+        },
+        {
+          "id": "ms",
+          "value": "manuscript"
+        }
+      ]
+    }
+  ],
+  "seed": {
+    "options": {
+      "seed": 1,
+      "users": ["zeus"],
+      "partRoles": [],
+      "fragmentRoles": []
+    },
+    "partSeeders": [
+      {
+        "id": "seed.it.vedph.note",
+        "options": {
+          "tags": ["language", "history", "geography"]
+        }
+      },
+      {
+        "id": "seed.it.vedph.renovella.tale-info"
+      },
+      {
+        "id": "seed.it.vedph.renovella.tale-story"
+      },
+      {
+        "id": "seed.it.vedph.bibliography"
+      },
+      {
+        "id": "seed.it.vedph.categories",
+        "options": {
+          "categories": ["colors.red", "colors.green", "colors.blue"]
+        }
+      },
+      {
+        "id": "seed.it.vedph.index-keywords"
+      },
+      {
+        "id": "seed.it.vedph.doc-references"
+      },
+      {
+        "id": "seed.it.vedph.external-ids"
+      }
+    ],
+    "fragmentSeeders": []
+  }
+}
