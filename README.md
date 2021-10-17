@@ -13,3 +13,14 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 ## History
 
 - 2021-10-17: refactored `DocReference` and `PersonName` model now depending on bricks, while moving `CitedPerson` from Itinera as a submodel of this project. For breaking changes in the database see <https://github.com/vedph/cadmus-renovella>.
+
+- 2021-10-17: breaking change for auth database by AspNetCore.Identity.Mongo 8.3.1 (used since Cadmus.Api.Controllers 1.3.0, Cadmus.Api.Services 1.2.0):
+
+```js
+/*
+Removed fields:
+AuthenticatorKey = null
+RecoveryCodes = []
+*/
+db.Users.updateMany({}, { $unset: {"AuthenticatorKey": 1, "RecoveryCodes": 1} });
+```
