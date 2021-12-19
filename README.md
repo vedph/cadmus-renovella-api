@@ -12,6 +12,8 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2021-12-19: adding new part.
+
 - 2021-11-11: upgraded to NET 6.
 
 - 2021-10-17: refactored `DocReference` and `PersonName` model now depending on bricks, while moving `CitedPerson` from Itinera as a submodel of this project. For breaking changes in the database see <https://github.com/vedph/cadmus-renovella>.
