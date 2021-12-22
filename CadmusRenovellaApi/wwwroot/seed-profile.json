@@ -57,12 +57,20 @@
           "sortKey": "f"
         },
         {
+          "typeId": "it.vedph.renovella.poetic-texts",
+          "name": "poetic",
+          "description": "Info about poetic texts.",
+          "colorKey": "A0B0F8",
+          "groupKey": "other",
+          "sortKey": "g"
+        },
+        {
           "typeId": "it.vedph.note",
           "name": "note",
           "description": "A free text note.",
           "colorKey": "B0A0F8",
           "groupKey": "other",
-          "sortKey": "g"
+          "sortKey": "h"
         }
       ]
     },
@@ -132,12 +140,20 @@
           "sortKey": "g"
         },
         {
+          "typeId": "it.vedph.renovella.poetic-texts",
+          "name": "poetic",
+          "description": "Info about poetic texts.",
+          "colorKey": "A0B0F8",
+          "groupKey": "other",
+          "sortKey": "h"
+        },
+        {
           "typeId": "it.vedph.note",
           "name": "note",
           "description": "A free text note.",
           "colorKey": "B0A0F8",
           "groupKey": "other",
-          "sortKey": "h"
+          "sortKey": "i"
         }
       ]
     }
@@ -1492,6 +1508,71 @@
           "value": "manuscript"
         }
       ]
+    },
+    {
+      "id": "poetic-text-metres",
+      "entries": [
+        {
+          "id": "-",
+          "value": "(nessuno)"
+        },
+        {
+          "id": "ballata",
+          "value": "ballata"
+        },
+        {
+          "id": "canzone",
+          "value": "canzone"
+        },
+        {
+          "id": "capitolo",
+          "value": "capitolo quadernario"
+        },
+        {
+          "id": "carme",
+          "value": "carme"
+        },
+        {
+          "id": "egloga",
+          "value": "egloga"
+        },
+        {
+          "id": "epigramma",
+          "value": "epigramma"
+        },
+        {
+          "id": "madrigale",
+          "value": "madrigale"
+        },
+        {
+          "id": "mottetto",
+          "value": "mottetto"
+        },
+        {
+          "id": "sestina",
+          "value": "sestina"
+        },
+        {
+          "id": "sonetto",
+          "value": "sonetto"
+        },
+        {
+          "id": "sonetto-c",
+          "value": "sonetto caudato/ritornellato"
+        },
+        {
+          "id": "stanza",
+          "value": "stanza di canzone"
+        },
+        {
+          "id": "terza",
+          "value": "terza rima"
+        },
+        {
+          "id": "other",
+          "value": "altro"
+        }
+      ]
     }
   ],
   "seed": {
@@ -1531,6 +1612,9 @@
       },
       {
         "id": "seed.it.vedph.external-ids"
+      },
+      {
+        "id": "seed.it.vedph.renovella.poetic-texts"
       }
     ],
     "fragmentSeeders": []
