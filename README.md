@@ -3,7 +3,7 @@
 Quick Docker image build:
 
 ```bash
-docker build . -t vedph2020/cadmus_renovella_api:2.0.0 -t vedph2020/cadmus_renovella_api:latest
+docker build . -t vedph2020/cadmus_renovella_api:2.1.0 -t vedph2020/cadmus_renovella_api:latest
 ```
 
 (replace with the current version).
@@ -12,12 +12,143 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+### 2.1.0
+
+- 2022-02-08: updated packages. New image: 2.1.0.
+
+Update procedure for server:
+
+(1) in MongoDB `cadmus-renovella-auth` execute:
+
+```js
+db.Users.updateMany({}, { $unset: {"AuthenticatorKey": 1, "RecoveryCodes": 1} });
+```
+
+(2) in MongoDB `cadmus-renovella` execute:
+
+```js
+// (1) TaleInfoPart for author:
+// get records before update
+db.parts.find({
+    "typeId" : "it.vedph.renovella.tale-info",
+    "content.author.name.parts" : {
+        $exists : true
+    }
+});
+
+// update renaming 'parts' into 'pieces'
+db.parts.updateMany(
+{
+"typeId" : "it.vedph.renovella.tale-info",
+"content.author.name.parts" : { $exists : true }
+},
+{
+$rename: {
+"content.author.name.parts": "content.author.name.pieces"
+}
+}, false, true);
+
+// (2) TaleInfoPart for dedicatee:
+// get records before update
+db.parts.find({
+    "typeId" : "it.vedph.renovella.tale-info",
+    "content.dedicatee.name.parts" : {
+        $exists : true
+    }
+});
+
+// update renaming 'parts' into 'pieces'
+db.parts.updateMany(
+{
+"typeId" : "it.vedph.renovella.tale-info",
+"content.dedicatee.name.parts" : { $exists : true }
+},
+{
+$rename: {
+"content.dedicatee.name.parts": "content.dedicatee.name.pieces"
+}
+}, false, true);
+
+// (3) TaleInfoPart for references:
+// get all the author's sources
+db.parts.find({
+    "typeId" : "it.vedph.renovella.tale-info",
+    "content.author.sources" : {
+        $exists : true, $ne: []
+    }
+});
+// manually adjust, only 1 case
+
+// (4) TaleInfoPart for ID references:
+// get all the author's IDs sources
+db.parts.find({
+    "typeId" : "it.vedph.renovella.tale-info",
+    "content.author.ids.sources" : {
+        $exists : true, $ne: []
+    }
+});
+// manually adjust, only 6 cases
+```
+
+List of cases:
+
+(3.1) Le novelle del Bianco Alfani e di Madonna Lisetta Levaldini: author.sources:
+
+- Ed riferimento: Rossella Bessi
+- Un dittico quattrocentesco
+- Interpretes XIV 1994
+- Bessi identifica il narratore della cornice, ovvero l'anonimo mittente dell'epistola comitatoria, con l'autore delle novelle. Piero di Filippo del Nero. Si noti però che lo stesso, con l'epiteto di Piero Viniziano, vi compare poi come personaggio distinto da chi narra.
+
+(4.1) I diporti: author.ids[0].sources:
+
+- DBI
+- Daniele Ghirlanda - Luigi Collarile
+- PARABOSCO, Girolamo
+- DBI vol 81 (2014)
+- https://www.treccani.it/enciclopedia/girolamo-parabosco_(Dizionario-Biografico)/
+
+(4.2) Le novelle del Bianco Alfani e di Madonna Lisetta Levaldini: author.ids[0].sources:
+
+- DBI
+- Liana Cellerino
+- Del Nero, Piero
+- DBI vol 38 (1990)
+
+(4.3) Novella di madonna Lisetta Levaldini: author.ids[0].sources:
+
+- DBI
+- Liana Cellerino
+- Del Nero, Piero
+- DBI vol 38 (1990)
+
+(4.4) Novella del Bianco Alfani: author.ids[0].sources:
+
+- DBI
+- Liana Cellerino
+- Del Nero, Piero
+- https://www.treccani.it/enciclopedia/piero-del-nero_res-40f2fcf6-87ec-11dc-8e9d-0016357eee51_(Dizionario-Biografico)/
+
+(4.5) Il Novellino: author.ids[0].sources:
+
+- DBI
+- Fabio De Proprio
+- Guardati, Tommaso
+- DBI vol 60 (2003)
+- https://www.treccani.it/enciclopedia/tommaso-guardati_%28Dizionario-Biografico%29/
+
+(4.6) Novella di Giulietta e Romeo: author.ids[0].sources:
+
+- DBI
+- Giorgio Patrizi
+- Da Porto, Luigi
+- DBI vol 32 (1986)
+- https://www.treccani.it/enciclopedia/luigi-da-porto_%28Dizionario-Biografico%29/
+
+### 2.0.0
+
 - 2021-12-19: adding new part.
-
 - 2021-11-11: upgraded to NET 6.
-
 - 2021-10-17: refactored `DocReference` and `PersonName` model now depending on bricks, while moving `CitedPerson` from Itinera as a submodel of this project. For breaking changes in the database see <https://github.com/vedph/cadmus-renovella>.
-
 - 2021-10-17: breaking change for auth database by AspNetCore.Identity.Mongo 8.3.1 (used since Cadmus.Api.Controllers 1.3.0, Cadmus.Api.Services 1.2.0):
 
 ```js
