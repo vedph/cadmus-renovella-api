@@ -12,7 +12,15 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
-- 2022-02018: updated packages.
+- 2022-02-18: updated packages.
+
+Update procedure for server data which still preserve the old facets:
+
+(1) replace all the facets (`collection` and `tale`) from this repository `seed-profile.json`.
+
+(2) replace these thesauri with the new versions from this repository `seed-profile.json`:
+
+  - `model-types@en`
 
 ### 2.1.2
 
