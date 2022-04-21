@@ -12,6 +12,7 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2022-04-21: updated packages.
 - 2022-02-18: updated packages.
 
 Update procedure for server data which still preserve the old facets:
