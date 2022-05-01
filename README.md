@@ -3,7 +3,7 @@
 Quick Docker image build:
 
 ```bash
-docker build . -t vedph2020/cadmus_renovella_api:2.1.2 -t vedph2020/cadmus_renovella_api:latest
+docker build . -t vedph2020/cadmus_renovella_api:2.2.0 -t vedph2020/cadmus_renovella_api:latest
 ```
 
 (replace with the current version).
@@ -12,6 +12,9 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+# 2.2.0
+
+- 2022-05-01: upgraded core to NET6.0.
 - 2022-04-21: updated packages.
 - 2022-02-18: updated packages.
 
