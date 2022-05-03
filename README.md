@@ -12,6 +12,12 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2022-05-02: added manuscript facet in profile. This is just an item with a generic note, as this project is not interested in full codicological models. To update the existing database, run this query:
+
+```js
+db.facets.insertOne({ "_id": "manuscript", "label": "manuscript", "description": "A manuscript.", "colorKey": "FCC060", "partDefinitions": [{ "typeId": "it.vedph.note", "name": "note", "description": "A free text note.", "colorKey": "B0A0F8", "groupKey": "other", "sortKey": "a" }] })
+```
+
 # 2.2.0
 
 - 2022-05-01: upgraded core to NET6.0.

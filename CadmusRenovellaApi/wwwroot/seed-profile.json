@@ -156,6 +156,22 @@
           "sortKey": "i"
         }
       ]
+    },
+    {
+      "id": "manuscript",
+      "label": "manuscript",
+      "description": "A manuscript.",
+      "colorKey": "FCC060",
+      "partDefinitions": [
+        {
+          "typeId": "it.vedph.note",
+          "name": "note",
+          "description": "A free text note.",
+          "colorKey": "B0A0F8",
+          "groupKey": "other",
+          "sortKey": "a"
+        }
+      ]
     }
   ],
   "flags": [
