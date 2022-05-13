@@ -3,7 +3,7 @@
 Quick Docker image build:
 
 ```bash
-docker build . -t vedph2020/cadmus_renovella_api:2.2.0 -t vedph2020/cadmus_renovella_api:latest
+docker build . -t vedph2020/cadmus_renovella_api:2.2.1 -t vedph2020/cadmus_renovella_api:latest
 ```
 
 (replace with the current version).

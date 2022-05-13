@@ -25,93 +25,18 @@
           "sortKey": "b"
         },
         {
-          "typeId": "it.vedph.bibliography",
-          "name": "bibliography",
-          "description": "Bibliography.",
-          "colorKey": "20B2AA",
+          "typeId": "it.vedph.renovella.available-witnesses",
+          "name": "witnesses",
+          "description": "Available witnesses.",
+          "colorKey": "20E2EB",
           "groupKey": "general",
           "sortKey": "c"
-        },
-        {
-          "typeId": "it.vedph.categories",
-          "name": "categories",
-          "description": "Categories.",
-          "colorKey": "98F8F8",
-          "groupKey": "metadata",
-          "sortKey": "d"
-        },
-        {
-          "typeId": "it.vedph.index-keywords",
-          "name": "keywords",
-          "description": "Index keywords.",
-          "colorKey": "588BBF",
-          "groupKey": "metadata",
-          "sortKey": "e"
-        },
-        {
-          "typeId": "it.vedph.external-ids",
-          "name": "external IDs",
-          "description": "List of external resources IDs",
-          "colorKey": "BF6558",
-          "groupKey": "metadata",
-          "sortKey": "f"
-        },
-        {
-          "typeId": "it.vedph.renovella.poetic-texts",
-          "name": "poetic",
-          "description": "Info about poetic texts.",
-          "colorKey": "A0B0F8",
-          "groupKey": "other",
-          "sortKey": "g"
-        },
-        {
-          "typeId": "it.vedph.note",
-          "name": "note",
-          "description": "A free text note.",
-          "colorKey": "B0A0F8",
-          "groupKey": "other",
-          "sortKey": "h"
-        }
-      ]
-    },
-    {
-      "id": "tale",
-      "label": "tale",
-      "description": "A single tale.",
-      "colorKey": "80839F",
-      "partDefinitions": [
-        {
-          "typeId": "it.vedph.renovella.tale-info",
-          "name": "tale",
-          "description": "Information about the tale.",
-          "isRequired": true,
-          "colorKey": "98F8F8",
-          "groupKey": "general",
-          "sortKey": "a"
-        },
-        {
-          "typeId": "it.vedph.renovella.tale-story",
-          "name": "story",
-          "description": "The story of the tale.",
-          "isRequired": true,
-          "colorKey": "F898F8",
-          "groupKey": "general",
-          "sortKey": "b"
         },
         {
           "typeId": "it.vedph.bibliography",
           "name": "bibliography",
           "description": "Bibliography.",
           "colorKey": "20B2AA",
-          "groupKey": "general",
-          "sortKey": "c"
-        },
-        {
-          "typeId": "it.vedph.doc-references",
-          "roleId": "",
-          "name": "references",
-          "description": "Manuscript and other documentary references.",
-          "colorKey": "FAC9D5",
           "groupKey": "general",
           "sortKey": "d"
         },
@@ -158,18 +83,93 @@
       ]
     },
     {
-      "id": "manuscript",
-      "label": "manuscript",
-      "description": "A manuscript.",
-      "colorKey": "FCC060",
+      "id": "tale",
+      "label": "tale",
+      "description": "A single tale.",
+      "colorKey": "80839F",
       "partDefinitions": [
+        {
+          "typeId": "it.vedph.renovella.tale-info",
+          "name": "tale",
+          "description": "Information about the tale.",
+          "isRequired": true,
+          "colorKey": "98F8F8",
+          "groupKey": "general",
+          "sortKey": "a"
+        },
+        {
+          "typeId": "it.vedph.renovella.tale-story",
+          "name": "story",
+          "description": "The story of the tale.",
+          "isRequired": true,
+          "colorKey": "F898F8",
+          "groupKey": "general",
+          "sortKey": "b"
+        },
+        {
+          "typeId": "it.vedph.renovella.available-witnesses",
+          "name": "witnesses",
+          "description": "Available witnesses.",
+          "colorKey": "20E2EB",
+          "groupKey": "general",
+          "sortKey": "c"
+        },
+        {
+          "typeId": "it.vedph.bibliography",
+          "name": "bibliography",
+          "description": "Bibliography.",
+          "colorKey": "20B2AA",
+          "groupKey": "general",
+          "sortKey": "d"
+        },
+        {
+          "typeId": "it.vedph.doc-references",
+          "roleId": "",
+          "name": "references",
+          "description": "Manuscript and other documentary references.",
+          "colorKey": "FAC9D5",
+          "groupKey": "general",
+          "sortKey": "e"
+        },
+        {
+          "typeId": "it.vedph.categories",
+          "name": "categories",
+          "description": "Categories.",
+          "colorKey": "98F8F8",
+          "groupKey": "metadata",
+          "sortKey": "f"
+        },
+        {
+          "typeId": "it.vedph.index-keywords",
+          "name": "keywords",
+          "description": "Index keywords.",
+          "colorKey": "588BBF",
+          "groupKey": "metadata",
+          "sortKey": "g"
+        },
+        {
+          "typeId": "it.vedph.external-ids",
+          "name": "external IDs",
+          "description": "List of external resources IDs",
+          "colorKey": "BF6558",
+          "groupKey": "metadata",
+          "sortKey": "h"
+        },
+        {
+          "typeId": "it.vedph.renovella.poetic-texts",
+          "name": "poetic",
+          "description": "Info about poetic texts.",
+          "colorKey": "A0B0F8",
+          "groupKey": "other",
+          "sortKey": "i"
+        },
         {
           "typeId": "it.vedph.note",
           "name": "note",
           "description": "A free text note.",
           "colorKey": "B0A0F8",
           "groupKey": "other",
-          "sortKey": "a"
+          "sortKey": "j"
         }
       ]
     }
@@ -200,6 +200,10 @@
     {
       "id": "model-types@en",
       "entries": [
+        {
+          "id": "it.vedph.renovella.available-witnesses",
+          "value": "witnesses"
+        },
         {
           "id": "it.vedph.renovella.tale-info",
           "value": "tale"
@@ -1606,7 +1610,7 @@
       {
         "id": "seed.it.vedph.note",
         "options": {
-          "tags": ["language", "history", "geography"]
+          "tags": [ "language", "history", "geography" ]
         }
       },
       {
@@ -1616,12 +1620,15 @@
         "id": "seed.it.vedph.renovella.tale-story"
       },
       {
+        "id": "seed.it.vedph.renovella.available-witnesses"
+      },
+      {
         "id": "seed.it.vedph.bibliography"
       },
       {
         "id": "seed.it.vedph.categories",
         "options": {
-          "categories": ["colors.red", "colors.green", "colors.blue"]
+          "categories": [ "colors.red", "colors.green", "colors.blue" ]
         }
       },
       {
