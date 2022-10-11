@@ -12,6 +12,10 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2022-10-11:
+  - updated packages and injection in `Startup.cs` for new `IRepositoryProvider`.
+  - added preview.
+
 ### 2.2.1
 
 - 2022-05-13: added available witnesses part and removed manuscript item. This implies these changes in the existing MongoDB:
