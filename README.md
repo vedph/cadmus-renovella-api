@@ -3,7 +3,7 @@
 Quick Docker image build:
 
 ```bash
-docker build . -t vedph2020/cadmus_renovella_api:2.2.1 -t vedph2020/cadmus_renovella_api:latest
+docker build . -t vedph2020/cadmus_renovella_api:3.0.0 -t vedph2020/cadmus_renovella_api:latest
 ```
 
 (replace with the current version).
@@ -12,6 +12,11 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+# 3.0.0
+
+- 2023-03-15:
+  - migrated to [new backend configuration](https://myrmex.github.io/overview/cadmus/dev/history/b-config).
+  - fix to preview config for note.
 - 2022-12-23: updated packages.
 - 2022-11-10: upgraded to NET 7.
 - 2022-10-11:
