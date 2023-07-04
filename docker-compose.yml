@@ -8,7 +8,7 @@ services:
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
-    command: mongod --logpath=/dev/null # --quiet
+    command: mongod --logpath=/dev/null
     ports:
       - 27017:27017
     networks:
@@ -27,22 +27,17 @@ services:
     networks:
       - cadmus-renovella-network
     # volumes:
-      # ensure you have created the var/db/pgsql folder in the host
-      # https://hub.docker.com/r/postgis/postgis
-      # - /var/db/pgsql:/var/lib/postgresql/data
+      #- pgsql-vol:/var/lib/postgresql/data
 
   # Cadmus Renovella API
   cadmus-renovella-api:
     image: vedph2020/cadmus-renovella-api:4.0.0
     ports:
-      # https://stackoverflow.com/questions/48669548/why-does-aspnet-core-start-on-port-80-from-within-docker
       - 40392:80
     depends_on:
       - cadmus-renovella-mongo
       - cadmus-renovella-pgsql
     environment:
-      # for Windows use : as separator, for non Windows use __
-      # (see https://github.com/aspnet/Configuration/issues/469)
       - CONNECTIONSTRINGS__DEFAULT=mongodb://cadmus-renovella-mongo:27017/{0}
       - CONNECTIONSTRINGS__INDEX=Server=cadmus-renovella-pgsql;port=5432;Database={0};User Id=postgres;Password=postgres;Include Error Detail=True
       - SERILOG__CONNECTIONSTRING=mongodb://cadmus-renovella-mongo:27017/{0}-log
@@ -57,3 +52,6 @@ services:
 networks:
   cadmus-renovella-network:
     driver: bridge
+
+#volumes:
+#  pgsql-vol:
