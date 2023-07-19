@@ -3,7 +3,7 @@
 Quick Docker image build:
 
 ```bash
-docker build . -t vedph2020/cadmus_renovella_api:4.0.0 -t vedph2020/cadmus_renovella_api:latest
+docker build . -t vedph2020/cadmus-renovella-api:4.0.2 -t vedph2020/cadmus-renovella-api:latest
 ```
 
 (replace with the current version).
@@ -11,6 +11,14 @@ docker build . -t vedph2020/cadmus_renovella_api:4.0.0 -t vedph2020/cadmus_renov
 This is a Cadmus API layer customized for the PRJ project. Most of its code is derived from shared Cadmus libraries. See the [documentation](https://github.com/vedph/cadmus_doc/blob/master/guide/api.md) for more.
 
 ## History
+
+### 4.0.2
+
+- 2023-07-19: refactored [logging](https://myrmex.github.io/overview/cadmus/dev/history/b-logging).
+
+### 4.0.1
+
+- 2023-07-19: updated packages.
 
 ### 4.0.0
 
@@ -141,7 +149,7 @@ List of cases:
 - Ed riferimento: Rossella Bessi
 - Un dittico quattrocentesco
 - Interpretes XIV 1994
-- Bessi identifica il narratore della cornice, ovvero l'anonimo mittente dell'epistola comitatoria, con l'autore delle novelle. Piero di Filippo del Nero. Si noti però che lo stesso, con l'epiteto di Piero Viniziano, vi compare poi come personaggio distinto da chi narra.
+- Bessi identifica il narratore della cornice, ovvero l'anonimo mittente dell'epistola comitatoria, con l'autore delle novelle. Piero di Filippo del Nero. Si noti perï¿½ che lo stesso, con l'epiteto di Piero Viniziano, vi compare poi come personaggio distinto da chi narra.
 
 (4.1) I diporti: author.ids[0].sources:
 
