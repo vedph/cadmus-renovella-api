@@ -118,7 +118,7 @@ namespace CadmusRenovellaApi
             }
 
             // get profile source
-            ILogger<Startup> logger = provider.GetService<ILogger<Startup>>();
+            ILogger<Startup>? logger = provider.GetService<ILogger<Startup>>();
             IHostEnvironment env = provider.GetService<IHostEnvironment>()!;
             string path = Path.Combine(env.ContentRootPath,
                 "wwwroot", "preview-profile.json");

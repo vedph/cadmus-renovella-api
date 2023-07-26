@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
 	<Nullable>enable</Nullable>
-	<Version>4.0.2</Version>
-	<FileVersion>4.0.2</FileVersion>
-	<AssemblyVersion>4.0.2</AssemblyVersion>
+	<Version>4.0.3</Version>
+	<FileVersion>4.0.3</FileVersion>
+	<AssemblyVersion>4.0.3</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,8 +15,8 @@
     <PackageReference Include="Cadmus.Api.Services" Version="8.0.6" />
     <PackageReference Include="Cadmus.Graph.Ef.PgSql" Version="3.0.1" />
     <PackageReference Include="Cadmus.Graph.Extras" Version="3.0.1" />
-    <PackageReference Include="Cadmus.Index.Ef.PgSql" Version="6.1.13" />
-    <PackageReference Include="Cadmus.Renovella.Services" Version="5.0.0" />
+    <PackageReference Include="Cadmus.Index.Ef.PgSql" Version="6.1.15" />
+    <PackageReference Include="Cadmus.Renovella.Services" Version="5.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.9" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
