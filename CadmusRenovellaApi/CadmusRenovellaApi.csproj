@@ -13,8 +13,8 @@
     <PackageReference Include="Cadmus.Api.Controllers" Version="8.0.7" />
     <PackageReference Include="Cadmus.Api.Models" Version="8.0.6" />
     <PackageReference Include="Cadmus.Api.Services" Version="8.0.6" />
-    <PackageReference Include="Cadmus.Graph.Ef.PgSql" Version="2.3.5" />
-    <PackageReference Include="Cadmus.Graph.Extras" Version="2.3.5" />
+    <PackageReference Include="Cadmus.Graph.Ef.PgSql" Version="3.0.1" />
+    <PackageReference Include="Cadmus.Graph.Extras" Version="3.0.1" />
     <PackageReference Include="Cadmus.Index.Ef.PgSql" Version="6.1.13" />
     <PackageReference Include="Cadmus.Renovella.Services" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.9" />

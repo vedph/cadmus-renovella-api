@@ -12,6 +12,8 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+- 2023-07-26: updated packages.
+
 ### 4.0.2
 
 - 2023-07-19: refactored [logging](https://myrmex.github.io/overview/cadmus/dev/history/b-logging).
