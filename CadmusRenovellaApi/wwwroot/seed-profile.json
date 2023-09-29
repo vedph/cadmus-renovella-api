@@ -360,6 +360,10 @@
           "value": "novella comica"
         },
         {
+          "id": "erotic",
+          "value": "novella erotica"
+        },
+        {
           "id": "tragic",
           "value": "novella tragica"
         },

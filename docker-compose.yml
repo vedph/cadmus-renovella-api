@@ -31,7 +31,7 @@ services:
 
   # Cadmus Renovella API
   cadmus-renovella-api:
-    image: vedph2020/cadmus-renovella-api:4.0.3
+    image: vedph2020/cadmus-renovella-api:4.0.4
     ports:
       - 40392:80
     depends_on:
