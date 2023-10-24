@@ -62,16 +62,29 @@ namespace CadmusRenovellaApi
                     {
                         string cs = hostingContext.Configuration
                             .GetConnectionString("Log")!;
-                        var maxSize = hostingContext.Configuration["Serilog:MaxMbSize"];
-
-                        loggerConfiguration
-                            .ReadFrom.Configuration(hostingContext.Configuration)
+                        string? maxSize = hostingContext.Configuration
+                            ["Serilog:MaxMbSize"] ?? "10";
+                        string? logPath = hostingContext.Configuration["Serilog:LogPath"];
 #if DEBUG
-                            .WriteTo.File("cadmus-log.txt", rollingInterval: RollingInterval.Day)
+                        if (string.IsNullOrEmpty(logPath)) logPath = "cadmus-log.txt";
 #endif
-                            .WriteTo.MongoDBCapped(cs,
-                                cappedMaxSizeMb: !string.IsNullOrEmpty(maxSize) &&
-                                    int.TryParse(maxSize, out int n) && n > 0 ? n : 10);
+                        if (!string.IsNullOrEmpty(logPath))
+                        {
+                            loggerConfiguration
+                                .ReadFrom.Configuration(hostingContext.Configuration)
+                                .WriteTo.File(logPath, rollingInterval: RollingInterval.Day)
+                                .WriteTo.MongoDBCapped(cs,
+                                    cappedMaxSizeMb: !string.IsNullOrEmpty(maxSize) &&
+                                        int.TryParse(maxSize, out int n) && n > 0 ? n : 10);
+                        }
+                        else
+                        {
+                            loggerConfiguration
+                                .ReadFrom.Configuration(hostingContext.Configuration)
+                                .WriteTo.MongoDBCapped(cs,
+                                    cappedMaxSizeMb: !string.IsNullOrEmpty(maxSize) &&
+                                        int.TryParse(maxSize, out int n) && n > 0 ? n : 10);
+                        }
                     })
                     .Build()
                     .SeedAsync(); // see Services/HostSeedExtension

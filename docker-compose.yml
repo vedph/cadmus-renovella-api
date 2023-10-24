@@ -31,7 +31,7 @@ services:
 
   # Cadmus Renovella API
   cadmus-renovella-api:
-    image: vedph2020/cadmus-renovella-api:4.0.4
+    image: vedph2020/cadmus-renovella-api:4.0.5
     ports:
       - 40392:80
     depends_on:
@@ -46,6 +46,11 @@ services:
       - MESSAGING__APIROOTURL=http://cadmusapi.azurewebsites.net
       - MESSAGING__APPROOTURL=http://cadmusapi.com/
       - MESSAGING__SUPPORTEMAIL=support@cadmus.com
+      # uncomment if you want to log to a file
+      # - SERILOG__LOGPATH=/var/cadmus-log.txt
+    # uncomment if you want to bind mount a file-based log
+    # volumes:
+    #   - /var/cadmus-log.txt:/var/cadmus-log.txt
     networks:
       - cadmus-renovella-network
 

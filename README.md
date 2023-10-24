@@ -3,7 +3,7 @@
 Quick Docker image build:
 
 ```bash
-docker build . -t vedph2020/cadmus-renovella-api:4.0.4 -t vedph2020/cadmus-renovella-api:latest
+docker build . -t vedph2020/cadmus-renovella-api:4.0.5 -t vedph2020/cadmus-renovella-api:latest
 ```
 
 (replace with the current version).
@@ -12,6 +12,9 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+### 4.0.5
+
+- 2023-10-24: updated packages and added environment variable for file-based log (`SERILOG_LOGPATH`). See [docker-compose.yml](docker-compose.yml) for an example with volume based bind mounts.
 - 2023-10-15: updated packages.
 
 ### 4.0.4
