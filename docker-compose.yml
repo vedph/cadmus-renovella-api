@@ -31,7 +31,7 @@ services:
 
   # Cadmus Renovella API
   cadmus-renovella-api:
-    image: vedph2020/cadmus-renovella-api:5.0.0
+    image: vedph2020/cadmus-renovella-api:5.0.1
     container_name: cadmus-renovella-api
     ports:
       - 40392:8080
