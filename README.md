@@ -12,6 +12,9 @@ This is a Cadmus API layer customized for the PRJ project. Most of its code is d
 
 ## History
 
+### 6.0.0
+
+- 2024-11-26: ⚠️ upgraded to .NET 9. Warning: to update the production environment, you will have to recreate user accounts in the new auth database. You can do it once using the editor UI.
 - 2024-10-05: updated packages.
 - 2024-07-19: updated packages.
 - 2024-06-24: updated packages.

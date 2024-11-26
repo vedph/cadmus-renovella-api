@@ -1,5 +1,3 @@
-version: '3.7'
-
 services:
   # MongoDB
   cadmus-renovella-mongo:
@@ -39,11 +37,13 @@ services:
       - cadmus-renovella-mongo
       - cadmus-renovella-pgsql
     environment:
+      - ASPNETCORE_URLS=http://+:8080
       - CONNECTIONSTRINGS__DEFAULT=mongodb://cadmus-renovella-mongo:27017/{0}
+      - CONNECTIONSTRINGS__AUTH=Server=cadmus-renovella-pgsql;port=5432;Database={0};User Id=postgres;Password=postgres;Include Error Detail=True
       - CONNECTIONSTRINGS__INDEX=Server=cadmus-renovella-pgsql;port=5432;Database={0};User Id=postgres;Password=postgres;Include Error Detail=True
       - SERILOG__CONNECTIONSTRING=mongodb://cadmus-renovella-mongo:27017/{0}-log
       - STOCKUSERS__0__PASSWORD=P4ss-W0rd!
-      - SEED__INDEXDELAY=25
+      - SEED__DELAY=20
       - MESSAGING__APIROOTURL=http://cadmusapi.azurewebsites.net
       - MESSAGING__APPROOTURL=http://cadmusapi.com/
       - MESSAGING__SUPPORTEMAIL=support@cadmus.com
