@@ -1,9 +1,11 @@
 # Cadmus Re.Novella API
 
-🐋 Quick Docker image build:
+🐋 Quick Docker image build (you need to have a `buildx` container):
 
 ```bash
-docker build . -t vedph2020/cadmus-renovella-api:5.0.1 -t vedph2020/cadmus-renovella-api:latest
+docker buildx create --use
+
+docker buildx build . --platform linux/amd64,linux/arm64 -t vedph2020/cadmus-renovella-api:5.0.1 -t vedph2020/cadmus-renovella-api:latest --push
 ```
 
 (replace with the current version).
